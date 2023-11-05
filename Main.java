@@ -36,13 +36,9 @@ public class Main {
                 int[] dataset_copy2 = datasets[i].clone();
 
                 // Algorithm 1
-                Runnable algorithm1 = () -> {
-                    MergeSort.mergeSort(dataset_copy1);
-                };
+                Runnable algorithm1 = () -> MergeSort.mergeSort(dataset_copy1);
                 // Algorithm 2
-                Runnable algorithm2 = () -> {
-                    QuickSort2PivotBlock.twoPivotQuickSort(dataset_copy2);
-                };
+                Runnable algorithm2 = () -> QuickSort2PivotBlock.twoPivotQuickSort(dataset_copy2);
 
                 System.out.println("Type of dataset: " + types[i]);
                 measureAlgorithm(algorithm1, "Merge Sort -" + types[i]);

@@ -17,9 +17,7 @@ public class MergeSort {
         while (aIndex <= aRight) temp[tIndex++] = arr[aIndex++];
         while (bIndex <= bRight) temp[tIndex++] = arr[bIndex++];
 
-        for (int i = 0; i < size; i++) {
-            arr[aLeft + i] = temp[i];
-        }
+        System.arraycopy(temp, 0, arr, aLeft + 0, size);
     }
 
     public static void mergeSort(int[] arr) {
