@@ -1,0 +1,32 @@
+Size of dataset: 512
+Type of dataset: Sorted
+Merge Sort -Sorted                       - Time: 1.0123 ms, Memory: 503344 bytes
+Block QuickSort 2 Pivot - Sorted         - Time: 5.3546 ms, Memory: 1115232 bytes
+
+Type of dataset: Reversed
+Merge Sort -Reversed                     - Time: 0.0792 ms, Memory: 38720 bytes
+Block QuickSort 2 Pivot - Reversed       - Time: 1.6419 ms, Memory: 1066544 bytes
+
+Type of dataset: Random
+Merge Sort -Random                       - Time: 0.0833 ms, Memory: 48088 bytes
+Block QuickSort 2 Pivot - Random         - Time: 0.1337 ms, Memory: 841040 bytes
+
+
+Size of dataset: 8192
+Type of dataset: Sorted
+Merge Sort -Sorted                       - Time: 1.5999 ms, Memory: 577176 bytes
+Block QuickSort 2 Pivot - Sorted         - Time: 63.1046 ms, Memory: -259746272 bytes
+
+Type of dataset: Reversed
+Merge Sort -Reversed                     - Time: 0.4618 ms, Memory: 2097152 bytes
+Block QuickSort 2 Pivot - Reversed       - Time: 38.9521 ms, Memory: 4567024 bytes
+
+Type of dataset: Random
+Merge Sort -Random                       - Time: 0.7445 ms, Memory: 576264 bytes
+Block QuickSort 2 Pivot - Random         - Time: 2.2172 ms, Memory: 5383568 bytes
+
+
+Size of dataset: 65536
+Type of dataset: Sorted
+Merge Sort -Sorted                       - Time: 2.2336 ms, Memory: 5274400 bytes
+

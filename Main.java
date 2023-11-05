@@ -1,28 +1,26 @@
-import java.util.Arrays;
-
 public class Main {
-
     // Function to measure time and memory usage of an algorithm
     static void measureAlgorithm(Runnable algorithm, String algorithmName) {
         // Garbage collector to get accurate memory usage
         System.gc();
         long startMemory = Runtime.getRuntime().freeMemory();
-        long startTime = System.currentTimeMillis();
+        long startTime = System.nanoTime();
 
         // Execute the algorithm
         algorithm.run();
 
-        long endTime = System.currentTimeMillis();
+        long endTime = System.nanoTime();
         long endMemory = Runtime.getRuntime().freeMemory();
 
         long elapsedTime = endTime - startTime;
         long memoryUsage = startMemory - endMemory;
 
-        System.out.println(algorithmName + " - Time: " + elapsedTime + " ms, Memory: " + memoryUsage + " bytes");
+
+        System.out.println(String.format("%-40s",algorithmName) + " - Time: " + elapsedTime/1000000.0 + " ms, Memory: " + memoryUsage + " bytes");
     }
 
     public static void main(String[] args) {
-        long seed = 12345L;
+        long seed = 987654L;
         int[] sizes = {1 << 9, 1 << 13, 1 << 16};
 
         for (int size : sizes) {
@@ -39,18 +37,17 @@ public class Main {
 
                 // Algorithm 1
                 Runnable algorithm1 = () -> {
-                    System.out.println("a");
-                    System.out.println("a");
+                    MergeSort.mergeSort(dataset_copy1);
                 };
                 // Algorithm 2
                 Runnable algorithm2 = () -> {
-                    System.out.println("a");
-                    System.out.println("a");
+                    QuickSort2PivotBlock.twoPivotQuickSort(dataset_copy2);
                 };
 
                 System.out.println("Type of dataset: " + types[i]);
-                measureAlgorithm(algorithm1, "Algorithm 1" + types[i]);
-                measureAlgorithm(algorithm2, "Algorithm 2" + types[i]);
+                measureAlgorithm(algorithm1, "Merge Sort -" + types[i]);
+                measureAlgorithm(algorithm2, "Block QuickSort 2 Pivot - " + types[i]);
+                System.out.println();
             }
 
             System.out.println();
